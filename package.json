@@ -1,0 +1,15 @@
+{
+  "name": "react-express-vite-ts",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": [
+    "client",
+    "server"
+  ],
+  "scripts": {
+    "install-all": "npm install --workspaces",
+    "build": "npm run -w client build && npm run -w server build",
+    "start": "npm run -w server start",
+    "dev": "npm run -w server dev & npm run -w client dev"
+  }
+}
