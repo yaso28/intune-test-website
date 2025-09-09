@@ -38,4 +38,10 @@ router.get('/messages', (req, res) => {
   })
 })
 
+router.post('/reload', (req, res) => {
+  const { m, r } = req.body as { m?: string; r?: string }
+
+  res.redirect(`/reload?m=${m}&r=${r}`)
+})
+
 export default router
