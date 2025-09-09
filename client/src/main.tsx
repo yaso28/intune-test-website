@@ -1,16 +1,17 @@
 
-import React from 'react'
+import React, { lazy } from 'react'
 import ReactDOM from 'react-dom/client'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import App from './App'
-import Home from './pages/Home'
-import NotFound from './pages/NotFound'
 import './styles.css'
-import FetchPost from './pages/FetchPost'
-import FetchGet from './pages/FetchGet'
-import AxiosPost from './pages/AxiosPost'
-import AxiosGet from './pages/AxiosGet'
-import Reload from './pages/Reload'
+
+const Home = lazy(() => import('./pages/Home'))
+const FetchPost = lazy(() => import('./pages/FetchPost'))
+const FetchGet = lazy(() => import('./pages/FetchGet'))
+const AxiosPost = lazy(() => import('./pages/AxiosPost'))
+const AxiosGet = lazy(() => import('./pages/AxiosGet'))
+const Reload = lazy(() => import('./pages/Reload'))
+const NotFound = lazy(() => import('./pages/NotFound'))
 
 const router = createBrowserRouter([
   {
