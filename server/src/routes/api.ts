@@ -1,5 +1,7 @@
 
 import { Router } from 'express'
+import { join } from 'path'
+import { cwd } from 'process'
 
 const router = Router()
 
@@ -43,5 +45,12 @@ router.post('/reload', (req, res) => {
 
   res.redirect(`/reload?m=${m}&r=${r}`)
 })
+
+router.get('/download', (req, res) => {
+  res.download(
+    join(cwd(), "/files/sample.txt"),
+    "sample.txt"
+  );
+});
 
 export default router

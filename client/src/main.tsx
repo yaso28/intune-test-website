@@ -11,6 +11,7 @@ const FetchGet = lazy(() => import('./pages/FetchGet'))
 const AxiosPost = lazy(() => import('./pages/AxiosPost'))
 const AxiosGet = lazy(() => import('./pages/AxiosGet'))
 const Reload = lazy(() => import('./pages/Reload'))
+const Etc = lazy(() => import('./pages/Etc'))
 const NotFound = lazy(() => import('./pages/NotFound'))
 
 const router = createBrowserRouter([
@@ -25,6 +26,7 @@ const router = createBrowserRouter([
       { path: 'axios/post', element: <AxiosPost /> },
       { path: 'axios/get', element: <AxiosGet /> },
       { path: 'reload', element: <Reload /> },
+      { path: 'etc', element: <Etc /> },
     ],
   },
 ])

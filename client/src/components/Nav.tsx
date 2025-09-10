@@ -10,6 +10,7 @@ export default function Nav() {
       <NavLink to="/axios/post">Axios Post</NavLink>
       <NavLink to="/axios/get">Axios Get</NavLink>
       <NavLink to="/reload">Reload</NavLink>
+      <NavLink to="/etc">Etc</NavLink>
     </nav>
   )
 }
