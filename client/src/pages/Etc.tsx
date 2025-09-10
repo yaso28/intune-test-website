@@ -46,6 +46,7 @@ export default function Etc() {
         <h2>External</h2>
         <button onClick={fetchExt}>fetch</button>
         <button onClick={axiosExt}>axios</button>
+        <a href="https://jsonplaceholder.typicode.com">link</a>
 
         {error && <p style={{ color: 'crimson', marginTop: 12 }}>エラー: {error}</p>}
         {extData && (
