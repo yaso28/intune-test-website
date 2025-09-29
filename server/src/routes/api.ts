@@ -1,7 +1,8 @@
 
 import { Router } from 'express'
-import { join } from 'path'
+import { dirname, join } from 'path'
 import { cwd } from 'process'
+import { fileURLToPath } from 'url'
 
 const router = Router()
 
@@ -47,10 +48,10 @@ router.post('/reload', (req, res) => {
 })
 
 router.get('/download', (req, res) => {
-  res.download(
-    join(cwd(), "/files/sample.txt"),
-    "sample.txt"
-  );
+  const __filename = fileURLToPath(import.meta.url)
+  const __dirname = dirname(__filename)
+  const filePath = join(__dirname, '../../files/sample.txt')
+  res.download(filePath, "sample.txt");
 });
 
 export default router

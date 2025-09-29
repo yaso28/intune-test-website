@@ -4,7 +4,8 @@ import { NavLink } from 'react-router-dom'
 export default function Nav() {
   return (
     <nav style={{ padding: '12px 16px', borderBottom: '1px solid #eee' }}>
-      <NavLink to="/" end>Home</NavLink>
+      <NavLink to="/" end>SPA Home</NavLink>
+      <a href='/page'>Page App</a>
       <NavLink to="/fetch/post">Fetch Post</NavLink>
       <NavLink to="/fetch/get">Fetch Get</NavLink>
       <NavLink to="/axios/post">Axios Post</NavLink>
